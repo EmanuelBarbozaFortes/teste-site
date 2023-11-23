@@ -1,0 +1,116 @@
+.header {
+  background: linear-gradient(90deg, #00a3b4 3.36%, rgba(7, 41, 95) 62.36%);
+  width: 100%;
+  box-shadow: 0px 10px 50px -20px rgba(0, 0, 0, 0.5);
+}
+
+.header .header-div {
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-padrao);
+  position: relative;
+}
+.header .logo {
+  width: 150px;
+}
+.header img {
+  width: 20px;
+}
+
+.header .icone-menu:hover,
+.header .navegacao .icone-osso,
+.header .navegacao .icone-usuario {
+  cursor: pointer;
+}
+.header .icone-menu:hover,
+.header .navegacao .icone-osso:hover,
+.header .navegacao .icone-usuario:hover {
+  outline: 8px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: outline ease-in-out 0.3s;
+}
+.header .navegacao .icone-usuario.ativo,
+.header .navegacao .icone-osso .ativo {
+  border-radius: 50px;
+  outline: 8px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.header .menu-osso {
+  color: white;
+  position: absolute;
+  /* padding: 10px; */
+  background: linear-gradient(180deg, #07295f 0%, #04567e 63.54%, #00a3b4 100%);
+  border-radius: 5px;
+  top: 80px;
+  right: 40px;
+  z-index: 1;
+  overflow: hidden;
+  max-width: 0px;
+  max-height: 0px;
+}
+.header .menu-osso.ativo {
+  padding: 10px;
+  max-width: 1000px;
+  max-height: 1000px;
+  transition: all ease-in-out 1s;
+  /* animation: moverDeCimaParaBaixo 0.5s ease-in-out; */
+}
+/* .header .menu-osso::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #07295f;
+  transform: rotate(45deg);
+  z-index: -1;
+  position: absolute;
+  top: -4px;
+  right: 15px;
+} */
+.form-padrao {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form-padrao input {
+  color: white;
+  border-radius: 6px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.form-padrao button {
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: white;
+  background-color: rgba(7, 41, 95);
+  border-radius: 6px;
+}
+.form-padrao button:hover {
+  background-color: rgba(7, 41, 95, 0.5);
+}
+.form-padrao a {
+  font-size: 10px;
+  text-align: end;
+}
+.form-padrao a:hover {
+  text-decoration: underline;
+}
+
+/* @keyframes moverDeCimaParaBaixo {
+  0% {
+    top: -250px;
+  }
+  50% {
+    top: 120px;
+  }
+  100% {
+    top: 80px;
+  }
+} */

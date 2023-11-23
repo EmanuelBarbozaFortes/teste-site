@@ -1,0 +1,71 @@
+.meus-pets-detalhe {
+  max-width: var(--largura-da-pagina);
+  position: absolute;
+  visibility: hidden;
+}
+
+.meus-pets-detalhe h2.titulo {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  position: relative;
+  color: #07295f;
+}
+.meus-pets-detalhe h2.titulo::after {
+  bottom: -13px;
+  content: url(../../imgs/icons/titulo-barra.svg);
+  position: absolute;
+  display: block;
+}
+.meus-pets-detalhe .detalhe {
+  margin-top: 25px;
+}
+.meus-pets-detalhe .detalhe {
+  display: flex;
+  gap: 20px;
+}
+.meus-pets-detalhe .detalhe .imagem-pet {
+  width: 420px;
+  height: 380px;
+  object-fit: cover;
+}
+.meus-pets-detalhe .detalhe .titulo {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.meus-pets-detalhe .formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.meus-pets-detalhe .formulario .primeira-linha,
+.meus-pets-detalhe .formulario .segunda-linha {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.meus-pets-detalhe .formulario .primeira-linha label > :first-child,
+.meus-pets-detalhe .formulario .segunda-linha label > :first-child,
+.meus-pets-detalhe .formulario .terceira-linha label > :first-child {
+  display: block;
+  color: #07295f;
+}
+.meus-pets-detalhe
+  .formulario
+  .primeira-linha
+  label:nth-last-child(-n + 3)
+  input {
+  width: 120px;
+}
+.meus-pets-detalhe .formulario .primeira-linha label input,
+.meus-pets-detalhe .formulario .segunda-linha label input,
+.meus-pets-detalhe .formulario .terceira-linha label input {
+  padding: 10px;
+  border: none;
+  background-color: #d9d9d9;
+  height: 40px;
+  border-radius: 10px;
+  width: 220px;
+}

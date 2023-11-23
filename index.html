@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pets</title>
+    <link
+      rel="shortcut icon"
+      href="./src/imgs/icons/dog.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/global-style.css" />
+    <link rel="stylesheet" href="./src/css/header/header.css" />
+    <link rel="stylesheet" href="./src/css/header/secao-de-navegacao.css" />
+    <link rel="stylesheet" href="./src/css/home/secao-bem-vindos.css" />
+    <link rel="stylesheet" href="./src/css/home/secao-empresas.css" />
+    <link rel="stylesheet" href="./src/css/meus-pets-detalhe/meus-pets-detalhe.css" />
+    <link rel="stylesheet" href="./src/css/footer.css" />
+
+    <link rel="stylesheet" href="./src/css/meus-pets/meus-pets.css" />
+    <link rel="stylesheet" href="./src/css/home/responsivo.css" />
+    <link rel="stylesheet" href="./src/css/meus-pets/responsivo.css" />
+    <link rel="stylesheet" href="./src/css/scrollbar.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-div">
+        <img
+          class="icone-menu"
+          src="./src/imgs/icons/IconMenu.png"
+          alt="Icone de Menu"
+        />
+        <!-- <img class="logo" src="./src/imgs/Logo.png" alt="Logo da página" /> -->
+        <picture>
+          <source
+            media="(max-width: 575px)"
+            srcset="./src/imgs/icons/dog.svg"
+          />
+          <img class="logo" src="./src/imgs/Logo.png" alt="Logo da página" />
+        </picture>
+        <nav class="navegacao">
+          <img
+            class="icone-osso"
+            src="./src/imgs/icons/osso.png"
+            alt="Icone de osso"
+          />
+          <img
+            class="icone-usuario"
+            src="./src/imgs/icons/conta.png"
+            alt="Icone de usuário"
+          />
+          <div class="menu-osso">
+            <form action="" class="form-padrao">
+              <label for="nome">Nome:</label>
+              <input type="email" name="nome" id="nome" />
+              <label for="senha">Senha:</label>
+              <input type="password" name="senha" id="senha" />
+              <button type="submit">Entrar</button>
+              <button type="submit">Cadastre-se</button>
+              <a href="#" target="_blank">Esqueci a senha</a>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <nav class="navegacao-menu">
+        <div class="icones-do-menu">
+          <img
+            class="icone-dog"
+            src="./src/imgs/icons/dog.svg"
+            alt="Icone de cachorro"
+          />
+          <img
+            class="icone-fechar"
+            src="./src/imgs/icons/xmark-solid.svg"
+            alt="Icone de fechar"
+          />
+        </div>
+        <ul class="menu-item">
+          <li class="item-do-menu">
+            <a onclick="mostrarHome()" id="home" class="link-nav">Home</a>
+          </li>
+          <li class="item-do-menu">
+            <a class="link-nav">Pets</a>
+            <ul class="sub-menu">
+              <li>
+                <a
+                  onclick="mostrarMeusPets()"
+                  id="meus-pets"
+                  class="sub-link-nav"
+                  >Meus Pets</a
+                >
+              </li>
+              <li><a class="sub-link-nav" href="">Novo Pet</a></li>
+            </ul>
+          </li>
+          <li class="item-do-menu">
+            <a class="link-nav">Agendamentos</a>
+            <ul class="sub-menu">
+              <li><a class="sub-link-nav" href="">Meus agendamentos</a></li>
+              <li><a class="sub-link-nav" href="">Agendar</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main" class="conteudo-principal">
+      <div class="overlay"></div>
+      <section class="bem-vindo center mostrar">
+        <div class="conteudo">
+          <p class="mensagem-bem-vindo">Seja bem vindo, aqui você conhece</p>
+          <h1 class="titulo">As melhores opções para o seu pet</h1>
+          <p class="descricao">
+            Nós reunimos os melhores Petshops da sua região para você ter maior
+            facilidade de agendar o banho e tosa de seu pet. Basta cadastrar seu
+            pet e agendar em uma das empresas abaixo.
+          </p>
+        </div>
+        <picture>
+          <source
+            media="(max-width: 968px)"
+            srcset="./src/imgs/person-bg-2.png"
+          />
+          <img
+            class="person"
+            src="./src/imgs/person.png"
+            alt="Mulher com cachorro"
+          />
+        </picture>
+      </section>
+      <section class="empresas center mostrar">
+        <h2 class="titulo">Conheça nossos petshops</h2>
+        <ul class="container-empresas">
+          <li class="empresa-info">
+            <img
+              class="empresa-img"
+              src="./src/imgs/woof.jpg"
+              alt="Imagem da empresa"
+            />
+            <div class="data">
+              <h4 class="nome-empresa">Empresa</h4>
+              <div class="info-nota">
+                <img src="./src/imgs/icons/star.svg" alt="" />
+                <span class="nota">5,0</span>
+              </div>
+            </div>
+          </li>
+          <li class="empresa-info">
+            <img
+              class="empresa-img"
+              src="./src/imgs/woof.jpg"
+              alt="Imagem da empresa"
+            />
+            <div class="data">
+              <h4 class="nome-empresa">Empresa</h4>
+              <div class="info-nota">
+                <img src="./src/imgs/icons/star.svg" alt="" />
+                <span class="nota">5,0</span>
+              </div>
+            </div>
+          </li>
+          <li class="empresa-info">
+            <img
+              class="empresa-img"
+              src="./src/imgs/woof.jpg"
+              alt="Imagem da empresa"
+            />
+            <div class="data">
+              <h4 class="nome-empresa">Empresa</h4>
+              <div class="info-nota">
+                <img src="./src/imgs/icons/star.svg" alt="" />
+                <span class="nota">5,0</span>
+              </div>
+            </div>
+          </li>
+          <li class="empresa-info">
+            <img
+              class="empresa-img"
+              src="./src/imgs/woof.jpg"
+              alt="Imagem da empresa"
+            />
+            <div class="data">
+              <h4 class="nome-empresa">Empresa</h4>
+              <div class="info-nota">
+                <img src="./src/imgs/icons/star.svg" alt="" />
+                <span class="nota">5,0</span>
+              </div>
+            </div>
+          </li>
+          <li class="empresa-info">
+            <img
+              class="empresa-img"
+              src="./src/imgs/woof.jpg"
+              alt="Imagem da empresa"
+            />
+            <div class="data">
+              <h4 class="nome-empresa">Empresa</h4>
+              <div class="info-nota">
+                <img src="./src/imgs/icons/star.svg" alt="" />
+                <span class="nota">5,0</span>
+              </div>
+            </div>
+          </li>
+          <li class="empresa-info">
+            <img
+              class="empresa-img"
+              src="./src/imgs/woof.jpg"
+              alt="Imagem da empresa"
+            />
+            <div class="data">
+              <h4 class="nome-empresa">Empresa</h4>
+              <div class="info-nota">
+                <img src="./src/imgs/icons/star.svg" alt="" />
+                <span class="nota">5,0</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="meus-pets center">
+        <h2 class="titulo">Meus pets</h2>
+        <button type="button" id="novo-pet">+ novo pet</button>
+        <ul class="pets">
+          <li class="pet">
+            <img
+              onclick="mostrarMeusPetsDetalhe()"
+              src="./src/imgs/meus-pets/pet-princesa.svg"
+              alt="Foto do Pet"
+            />
+            <h4 class="nome-pet">Princesa</h4>
+          </li>
+          <li class="pet">
+            <img src="./src/imgs/meus-pets/pet-louis.svg" alt="Foto do Pet" />
+            <h4 class="nome-pet">Louis Paulo</h4>
+          </li>
+          <li class="pet">
+            <img src="./src/imgs/meus-pets/pet-pamela.svg" alt="Foto do Pet" />
+            <h4 class="nome-pet">Pamela Gabriela</h4>
+          </li>
+          <li class="pet">
+            <img src="./src/imgs/meus-pets/pet-pamela.svg" alt="Foto do Pet" />
+            <h4 class="nome-pet">Pamela Gabriela</h4>
+          </li>
+          <li class="pet">
+            <img src="./src/imgs/meus-pets/pet-pamela.svg" alt="Foto do Pet" />
+            <h4 class="nome-pet">Pamela Gabriela</h4>
+          </li>
+          <li class="pet">
+            <img src="./src/imgs/meus-pets/pet-pamela.svg" alt="Foto do Pet" />
+            <h4 class="nome-pet">Pamela Gabriela</h4>
+          </li>
+        </ul>
+      </section>
+      <section class="meus-pets-detalhe center">
+        <h2 class="titulo">Meus pets</h2>
+        <div class="detalhe">
+          <img
+            class="imagem-pet"
+            src="./src/imgs/meus-pets/pet-princesa.svg"
+            alt=""
+          />
+          <form class="formulario">
+            <h3 class="titulo">Princesa</h3>
+            <div class="primeira-linha">
+              <label for="raca">
+                <span>Raça</span>
+                <input type="text" name="raca" id="raca" />
+              </label>
+
+              <label for="idade">
+                <span>Idade</span>
+                <input type="text" name="idade" id="idade" />
+              </label>
+              <label for="sexo">
+                <span>Sexo</span>
+                <input type="text" name="sexo" id="sexo" />
+              </label>
+              <label for="cadastrado">
+                <span>Cadastrado</span>
+                <input type="text" name="cadastrado" id="cadastrado" />
+              </label>
+            </div>
+            <div class="segunda-linha">
+              <label for="temperamento">
+                <span>Temperamento</span>
+                <input type="text" name="temperamento" id="temperamento" />
+              </label>
+
+              <label for="imagem">
+                <span>Tamanho</span>
+                <input type="text" name="tamanho" id="tamanho" />
+              </label>
+              <label for="tipo">
+                <span>Tipo</span>
+                <input type="text" name="tipo" id="tipo" />
+              </label>
+            </div>
+            <div class="terceira-linha">
+              <label for="imagem">
+                <span>Imagem</span>
+                <input type="text" name="imagem" id="imagem" />
+              </label>
+            </div>
+          </form>
+        </div>
+      </section>
+      <footer class="footer">©2023 TDEV</footer>
+    </main>
+    <script type="module" src="./src/js/index.js"></script>
+    <script src="./src/js/navegacao.js"></script>
+  </body>
+</html>

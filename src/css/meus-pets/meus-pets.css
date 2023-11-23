@@ -1,0 +1,53 @@
+.meus-pets {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--largura-da-pagina);
+  padding: 50px 0px;
+  position: absolute;
+  visibility: hidden;
+}
+.meus-pets .titulo {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  position: relative;
+  color: #07295f;
+}
+.meus-pets .titulo::after {
+  bottom: -13px;
+  content: url(../../imgs/icons/titulo-barra.svg);
+  position: absolute;
+  display: block;
+}
+.meus-pets #novo-pet {
+  margin-top: 25px;
+  padding: 7px 10px;
+  text-transform: uppercase;
+  color: #07295f;
+  font-weight: 500;
+  border: none;
+  background-color: #d9d9d9;
+  cursor: pointer;
+  align-self: flex-start;
+}
+.meus-pets #novo-pet:hover {
+  box-shadow: 0 0 5px 0 black;
+}
+.meus-pets .pets {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+.meus-pets .pets .pet img {
+  width: 350px;
+  height: 320px;
+  object-fit: cover;
+}
+.meus-pets .pets .pet .nome-pet {
+  font-size: 25px;
+  font-weight: 400;
+}
+

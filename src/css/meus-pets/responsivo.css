@@ -1,0 +1,11 @@
+@media (max-width: 968px) {
+  .meus-pets{
+    align-items: center;
+  }
+  .meus-pets #novo-pet{
+    align-self: center;
+  }
+  .meus-pets .pets {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,26 @@
+:root {
+  --largura-da-pagina: 1440px;
+  --padding-padrao: 0 50px;
+}
+body .conteudo-principal .center {
+  margin: 0 auto;
+  padding: 0 100px;
+}
+main {
+  overflow-y: auto;
+  height: calc(100% - 70px);
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.conteudo-principal section.mostrar {
+  margin-bottom: 70px;
+}
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+body .conteudo-principal .mostrar {
+  visibility: visible;
+  position: initial;
+}

@@ -1,0 +1,95 @@
+.header .navegacao {
+  display: flex;
+  gap: 20px;
+}
+.header .navegacao-menu {
+  margin-left: -100%;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  background: linear-gradient(180deg, #00a3b4 0%, #04567e 63.54%, #07295f 100%);
+  padding: 30px 0px;
+  z-index: 1;
+  color: white;
+  min-width: 250px;
+  transition: margin-left ease-in-out 0.5s;
+}
+.header .navegacao-menu.mostrar-menu {
+  margin-left: 0px;
+}
+.header .navegacao-menu .icones-do-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin-bottom: 25px;
+}
+.header .navegacao-menu .icones-do-menu .icone-fechar {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: outline ease-in-out 0.5s;
+}
+.header .navegacao-menu .icones-do-menu .icone-fechar:hover {
+  outline: 5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.header .navegacao-menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.header .navegacao-menu .link-nav.seta-icone::after {
+  content: url(../../imgs/icons/seta-icone.svg);
+  transition: transform ease-in-out 0.5s;
+}
+.header .navegacao-menu .link-nav.seta-icone.girar-seta::after {
+  transform: rotate(90deg);
+}
+.header .navegacao-menu .link-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  /* border-radius: 10px; */
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all ease-in-out 0.2s;
+}
+.header .navegacao-menu .link-nav:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.header .navegacao-menu .link-nav:active,
+.header .navegacao-menu .item-do-menu .sub-menu .sub-link-nav:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.header .navegacao-menu .item-do-menu .sub-menu {
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+  max-height: 0px;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+}
+.header .navegacao-menu .item-do-menu .sub-menu.aberto {
+  margin: 5px 0 0;
+  max-height: 600px;
+}
+.header .navegacao-menu .item-do-menu .sub-menu li a {
+  padding: 10px 20px;
+  display: block;
+  /* border-radius: 10px; */
+  /* background-color: rgba(255, 255, 255, 0.2); */
+}
+.header .navegacao-menu .item-do-menu .sub-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color ease-in-out 0.1s;
+}
+.overlay.ativo {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all ease-in-out 0.5s;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
